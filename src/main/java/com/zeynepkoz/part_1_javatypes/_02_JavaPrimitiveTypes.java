@@ -29,7 +29,7 @@ public class _02_JavaPrimitiveTypes {
         boolean b2 = true;
         System.out.println("boolean: " + b2);
 
-        char c2 = 'A';
+        char c2 = 'Z';
         System.out.println("char: " + c2);
 
 
