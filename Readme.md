@@ -3,12 +3,12 @@
 
 ---
 
-##ShortCuts
-Single Comment   => Ctrl+/
-Multiple Comment => Shift+Ctrl+/
-Beautify: Ctrl+Alt+l
-Copyand pase: Ctrl+d
-Hepsini değiştir: Shift+F6
+## ShortCuts
+- Single Comment   => Ctrl+/
+- Multiple Comment => Shift+Ctrl+/
+- Beautify: Ctrl+Alt+l
+- Copyand pase: Ctrl+d
+- Hepsini değiştir: Shift+F6
 
 ---
 
