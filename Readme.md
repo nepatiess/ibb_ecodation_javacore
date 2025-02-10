@@ -7,7 +7,8 @@
 ```
 ---
 
-# Bilgiler
+# Ödevler
+# 1. Ders Ödev (4 Şubat 2025)
 ## Maven Nedir?
 Maven, Java projelerinde bağımlılık yönetimi ve otomasyon sağlayan bir proje yönetim aracıdır. Apache tarafından geliştirilmiştir ve projelerin derlenmesi, test edilmesi, paketlenmesi gibi işlemleri otomatikleştirir.
 
@@ -157,8 +158,17 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 - Primitive Types bellekte doğrudan yer kaplayan basit veri türleridir.
 - Wrapper Types, primitive türleri nesne olarak kullanmayı sağlar.
 
+# 2. Ders Ödev (6 Şubat 2025)
+## camelCase yazım nedir? 
 
 
+## PascalCase yazım nedir? 
+
+
+## snace_case yazım nedir? 
+
+
+## kebab-case yazım nedir?
 
 
 
