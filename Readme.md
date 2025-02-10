@@ -155,8 +155,8 @@ Java’da değişkenlerin alabileceği veri tiplerini belirleyen sınıflandırm
 
 ### Wrapper Types (Sarmalıyıcı Tipler) Nedir?
 Wrapper sınıfları, primitive türleri nesne olarak kullanmayı sağlar.
-
 - Primitive Type → Wrapper Type Dönüşümleri
+
 | Primitive Type | Wrapper Class |
 | -------------- | ------------- |
 | byte | Byte |
