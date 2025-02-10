@@ -1,8 +1,9 @@
 package com.zeynepkoz.part_1_javatypes;
 
-public class _02_JavaPrimitiveTypes {
+public class _03_JavaPrimitiveTypes {
 
     public static void main(String[] args) {
+
         // Primitive type 8 tanedir, null değer alamayız.
 
         // tam sayılar (4)
