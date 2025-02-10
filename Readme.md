@@ -7,37 +7,6 @@
 ```
 ---
 
-## Java Core
-```sh
-
-```
----
-## Java Core
-```sh
-
-```
----
-## Java Core
-```sh
-
-```
----
-## Java Core
-```sh
-
-```
----
-## Java Core
-```sh
-
-```
----
-## Java Core
-```sh
-
-```
----
-
 # Bilgiler
 ## Maven Nedir?
 Maven, Java projelerinde bağımlılık yönetimi ve otomasyon sağlayan bir proje yönetim aracıdır. Apache tarafından geliştirilmiştir ve projelerin derlenmesi, test edilmesi, paketlenmesi gibi işlemleri otomatikleştirir.
