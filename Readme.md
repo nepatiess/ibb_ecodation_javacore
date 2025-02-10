@@ -199,6 +199,27 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 
 
 
+## Soru
+```
+int number1=10; number1++;
+System.out.println(number1);
+ilk number1
+
+int number2=10; ++number2;
+System.out.println(number2);
+```
+
+
+
+## Stack Memory - Heap Memory Nedir?
+
+## Escape Character Nedir?
+
+## Scanner Class Nedir?
+
+
+
+
 
 
 
