@@ -87,7 +87,6 @@ Compiler, Java kaynak kodunu (.java dosyalarını) makine tarafından anlaşıla
 ## Örnek
 ```
 javac HelloWorld.java
-
 ```
 ---
 
@@ -175,7 +174,6 @@ Integer wrapperInt = primitiveInt;  // Otomatik kutulama (Autoboxing)
 
 Integer wrapperValue = Integer.valueOf(20);
 int primitiveValue = wrapperValue;  // Otomatik açma (Unboxing)
-
 ```
 Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıdır çünkü koleksiyonlar yalnızca nesneleri saklayabilir.
 
