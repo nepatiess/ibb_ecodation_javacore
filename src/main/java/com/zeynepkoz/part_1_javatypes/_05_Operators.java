@@ -1,6 +1,6 @@
 package com.zeynepkoz.part_1_javatypes;
 
-public class _04_Operators {
+public class _05_Operators {
 
     public static void main(String[] args) {
         // Operatörler
@@ -28,9 +28,5 @@ public class _04_Operators {
         // Mantıksal Operatörler &&=VE ||=VEYA !=DEĞİL
         // ++ 1 artır.
         // -- 1 azalt.
-
-
-
-
     }
 }
