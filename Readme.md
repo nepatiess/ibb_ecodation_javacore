@@ -1,6 +1,17 @@
 # IBB Ecodation Java Core
 [Gıthub](https://github.com/nepatiess/ibb_ecodation_javacore)
 
+---
+
+##ShortCuts
+Single Comment   => Ctrl+/
+Multiple Comment => Shift+Ctrl+/
+Beautify: Ctrl+Alt+l
+Copyand pase: Ctrl+d
+Hepsini değiştir: Shift+F6
+
+---
+
 ## Java Common Rules
 ```sh
 Class isimleri PascalCase göre yazılır
