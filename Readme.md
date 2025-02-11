@@ -338,7 +338,9 @@ public class Main {
         System.out.println("Bildiğiniz diller veya teknolojiler: ");
         language = klavye.nextInt();
         
-
+# 4. ders ödevi (11 Şubat)
+- switch-case ile if-else if-else arasındaki farklar nelerdir?
+- for ile while arasındaki fark nelerdir?
 
 
 
