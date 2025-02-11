@@ -187,31 +187,69 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 
 # 2. Ders Ödev (6 Şubat 2025)
 ## camelCase yazım nedir? 
-
+- İlk kelime küçük harfle başlar, sonraki kelimeler büyük harfle başlar.
+- Genellikle JavaScript, Java ve C# gibi dillerde kullanılır.
+## camelCase
+```
+string userName
+int playerScore
+```
 
 ## PascalCase yazım nedir? 
+- Tüm kelimelerin ilk harfi büyük olur.
+- Genllikle sınıf (class) isimleri için kullanılır.
 
+## PascalCase
+```
+class PlayerData{}
+class GameManager{}
+```
 
 ## snace_case yazım nedir? 
+- Tüm harfler küçük olur, kelimeler alt çizgi (_) ile ayrılır.
+- Genellikle Python'da değişken ve fonksiyon isimlendirmede tercih edilir.
 
+## snake_case
+```
+user_name
+player_score
+```
 
 ## kebab-case yazım nedir?
+- Tüm harfler küçük olur, kelimeler tire (-) ile ayrılır.
+- Genellikle HTML, CSS ve URL yapılarında kullanılır.
 
+## kebab-case
+```
+<div class = "player-score"></div>
+<link rel = "stylesheet" href = "game-style.css">
+```
 
-
-## Soru
+## Sorular
 ```
 int number1=10; number1++;
 System.out.println(number1);
-ilk number1
+```
+Açıklama: Önce değişkenin değeri kullanılır, sonra artar.
+number1=10+1=11 olur
+Çıktı: 11
 
+```
 int number2=10; ++number2;
 System.out.println(number2);
 ```
-
-
+Açıklama: Önce değişkenin değeri artılır, sonra kullanılır
+number1=10+1=11 olur
+Çıktı: 11
 
 ## Stack Memory - Heap Memory Nedir?
+- Stack ve Heap, programların verileri saklamak için kullandığı iki farklı alanı ifade eder.
+| Stack Memory | Heap Memory |
+| Küçük ve hızlıdır. | Daha büyük ve daha yavaş. |
+| Metod çağrıları sırasında kullanılan değişkenler burda saklanır. | Nesneler (objects) burda saklanır. |
+| Yerel (local) değişkenler ve metod çağrılarına ait bilgiler burada tutulur. |          |
+| LIFO (Last in, first out) prensibiyle çalışır. |    |
+| Metot tanımlandığında, ilgili değişkenler bellekten otomatik olarak kaldırılır. | Garbage Collector kullanarak kullanılmayan nesneler temizlenir. | 
 
 ## Escape Character Nedir?
 
