@@ -333,7 +333,11 @@ public class Main {
 
 - Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
-
+# 3. ders ödevi
+// Stringten'ten int geçerken nasıl çözebiliriz?
+        System.out.println("Bildiğiniz diller veya teknolojiler: ");
+        language = klavye.nextInt();
+        
 
 
 
