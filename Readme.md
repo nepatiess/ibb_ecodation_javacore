@@ -333,8 +333,14 @@ public class Main {
 
 - Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
-
-
+# 3. ders ödevi
+// Stringten'ten int geçerken nasıl çözebiliriz?
+        System.out.println("Bildiğiniz diller veya teknolojiler: ");
+        language = klavye.nextInt();
+        
+# 4. ders ödevi (11 Şubat)
+- switch-case ile if-else if-else arasındaki farklar nelerdir?
+- for ile while arasındaki fark nelerdir?
 
 
 
