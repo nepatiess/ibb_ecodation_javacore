@@ -276,9 +276,9 @@ Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
 | -------- | -------- |
 | \n | Yeni satır |
 | \t | Sekme (tab) | 
-| \" | Çift tırnak | 
-| \' | Tek tırnak | 
-| \\ | Ters eğik çizgi | 
+| \\" | Çift tırnak | 
+| \\' | Tek tırnak | 
+| \\\ | Ters eğik çizgi | 
 
 ## Scanner Class Nedir?
 - Scanner sınıfı, kullanıcıdan veri almak için kullanılır. Java'da giriş almak için genellikle **System.in** ile birlikte kullanılır.
