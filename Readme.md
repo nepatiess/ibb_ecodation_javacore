@@ -253,11 +253,61 @@ number1=10+1=11 olur
 | LIFO (Last in, first out) prensibiyle çalışır. |    |
 | Metot tanımlandığında, ilgili değişkenler bellekten otomatik olarak kaldırılır. | Garbage Collector kullanarak kullanılmayan nesneler temizlenir. | 
 
+``` Stack Memory Örnek
+public void example() {
+  int x = 10; //Stack'te saklanır.
+}
+```
+
+
+``` Heap Memory Örnek
+class Player {
+  String name; //Heap'te saklanır.
+}
+
+Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
+```
+
 ## Escape Character Nedir?
+- Escape karakterlerini, özel karakterleri ekranda göstermek veya belirli işlemleri gerçekleitrmesi için kullanılır. Ters eğik çizgi (\) ile başlar.
+
+### Bazı yaygın escape karakterleri:
+| Karakter | Açıklama |
+| \n | Yeni satır |
+| \t | Sekme (tab) | 
+| \" | Çift tırnak | 
+| \' | Tek tırnak | 
+| \\ | Ters eğik çizgi | 
 
 ## Scanner Class Nedir?
+- Scanner sınıfı, kullanıcıdan veri almak için kullanılır. Java'da giriş almak için genellikle **System.in** ile birlikte kullanılır.
 
+``` Kullanımı
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  // Scanner nesnesi oluşturulur.
+        
+        System.out.print("Adınızı girin: ");
+        String name = input.nextLine();  // Kullanıcıdan String giriş alınır.
+        
+        System.out.print("Yaşınızı girin: ");
+        int age = input.nextInt();  // Kullanıcıdan int giriş alınır.
+
+        System.out.println("Adınız: " + name);
+        System.out.println("Yaşınız: " + age);
+        
+        input.close();  // Scanner kapatılır.
+    }
+}
+```
+
+- nextInt() : Tam sayı almak için
+- nextDouble() : Ondalıklı sayı alamk için
+- nextLine() : Bir satır (string) almak için
+
+- Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
 
 
