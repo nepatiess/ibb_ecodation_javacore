@@ -273,6 +273,7 @@ Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
 
 ### Bazı yaygın escape karakterleri:
 | Karakter | Açıklama |
+| -------- | -------- |
 | \n | Yeni satır |
 | \t | Sekme (tab) | 
 | \" | Çift tırnak | 
