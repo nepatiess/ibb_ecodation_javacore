@@ -77,6 +77,7 @@ JRE, Java programlarını çalıştırmak için gerekli ortamı sağlayan bir bi
 - Çalışma zamanı kütüphaneleri
 - Java sınıfları ve destekleyici dosyalar
 
+### Eğer sadece Java programlarını çalıştırmak istiyorsanız, JDK yerine sadece JRE yükleyebiliriz. Ancak, JRE Java kodu yazmak veya derlemek için yeterli değildir.
 ---
 
 ## Compiler Nedir?
@@ -187,37 +188,128 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 
 # 2. Ders Ödev (6 Şubat 2025)
 ## camelCase yazım nedir? 
-
+- İlk kelime küçük harfle başlar, sonraki kelimeler büyük harfle başlar.
+- Genellikle JavaScript, Java ve C# gibi dillerde kullanılır.
+## camelCase
+```
+string userName
+int playerScore
+```
 
 ## PascalCase yazım nedir? 
+- Tüm kelimelerin ilk harfi büyük olur.
+- Genllikle sınıf (class) isimleri için kullanılır.
 
+## PascalCase
+```
+class PlayerData{}
+class GameManager{}
+```
 
 ## snace_case yazım nedir? 
+- Tüm harfler küçük olur, kelimeler alt çizgi (_) ile ayrılır.
+- Genellikle Python'da değişken ve fonksiyon isimlendirmede tercih edilir.
 
+## snake_case
+```
+user_name
+player_score
+```
 
 ## kebab-case yazım nedir?
+- Tüm harfler küçük olur, kelimeler tire (-) ile ayrılır.
+- Genellikle HTML, CSS ve URL yapılarında kullanılır.
 
+## kebab-case
+```
+<div class = "player-score"></div>
+<link rel = "stylesheet" href = "game-style.css">
+```
 
-
-## Soru
+## Sorular
 ```
 int number1=10; number1++;
 System.out.println(number1);
-ilk number1
+```
+Açıklama: Önce değişkenin değeri kullanılır, sonra artar.
+number1=10+1=11 olur
+Çıktı: 11
 
+```
 int number2=10; ++number2;
 System.out.println(number2);
 ```
-
-
+Açıklama: Önce değişkenin değeri artılır, sonra kullanılır
+number1=10+1=11 olur
+Çıktı: 11
 
 ## Stack Memory - Heap Memory Nedir?
+- Stack ve Heap, programların verileri saklamak için kullandığı iki farklı alanı ifade eder.
+
+| Stack Memory | Heap Memory |
+| ------------ | ----------- |
+| Küçük ve hızlıdır. | Daha büyük ve daha yavaş. |
+| Metod çağrıları sırasında kullanılan değişkenler burda saklanır. | Nesneler (objects) burda saklanır. |
+| Yerel (local) değişkenler ve metod çağrılarına ait bilgiler burada tutulur. |          |
+| LIFO (Last in, first out) prensibiyle çalışır. |    |
+| Metot tanımlandığında, ilgili değişkenler bellekten otomatik olarak kaldırılır. | Garbage Collector kullanarak kullanılmayan nesneler temizlenir. | 
+
+``` Stack Memory Örnek
+public void example() {
+  int x = 10; //Stack'te saklanır.
+}
+```
+
+
+``` Heap Memory Örnek
+class Player {
+  String name; //Heap'te saklanır.
+}
+
+Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
+```
 
 ## Escape Character Nedir?
+- Escape karakterlerini, özel karakterleri ekranda göstermek veya belirli işlemleri gerçekleitrmesi için kullanılır. Ters eğik çizgi (\) ile başlar.
+
+### Bazı yaygın escape karakterleri:
+| Karakter | Açıklama |
+| -------- | -------- |
+| \n | Yeni satır |
+| \t | Sekme (tab) | 
+| \\" | Çift tırnak | 
+| \\' | Tek tırnak | 
+| \\\ | Ters eğik çizgi | 
 
 ## Scanner Class Nedir?
+- Scanner sınıfı, kullanıcıdan veri almak için kullanılır. Java'da giriş almak için genellikle **System.in** ile birlikte kullanılır.
 
+``` Kullanımı
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);  // Scanner nesnesi oluşturulur.
+        
+        System.out.print("Adınızı girin: ");
+        String name = input.nextLine();  // Kullanıcıdan String giriş alınır.
+        
+        System.out.print("Yaşınızı girin: ");
+        int age = input.nextInt();  // Kullanıcıdan int giriş alınır.
+
+        System.out.println("Adınız: " + name);
+        System.out.println("Yaşınız: " + age);
+        
+        input.close();  // Scanner kapatılır.
+    }
+}
+```
+
+- nextInt() : Tam sayı almak için
+- nextDouble() : Ondalıklı sayı alamk için
+- nextLine() : Bir satır (string) almak için
+
+- Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
 
 
