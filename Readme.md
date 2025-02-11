@@ -175,6 +175,28 @@ int primitiveValue = wrapperValue;  // Otomatik açma (Unboxing)
 ```
 Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıdır çünkü koleksiyonlar yalnızca nesneleri saklayabilir.
 
+## Primitive Types ve Wrapper Types Arasındaki Farklar
+| Özellik | Primitive Types | Wrapper Types |
+|----------------------|------------------------|------------------------|
+| **Tanım**            | Doğrudan değeri saklayan türlerdir. | Primitive türleri sarmalayan sınıflardır. |
+| **Hafıza Kullanımı**  | Daha az bellek kullanır, daha verimlidir. | Daha fazla bellek tüketir (ekstra nesne oluşturur). |
+| **Depolama**         | Stack bellekte saklanır. | Heap bellekte saklanır (Nesne olarak oluşturulduğu için). |
+| **Değer Tipi**       | Değer (value) tipindedir. | Referans (object) tipindedir. |
+| **Null Olabilir mi?** | **Hayır** (null olamaz). | **Evet** (null olabilir). |
+| **Varsayılan Değer**  | int → 0, double → 0.0, boolean → false vb. | null (eğer nesne oluşturulmamışsa). |
+| **Nesne Davranışı**  | Nesne değildir, direkt hesaplama yapar. | Nesnedir, metodları vardır. |
+| **Koleksiyonlarda Kullanım** | **Doğrudan kullanılamaz** (List<int> gibi bir şey yazamayız). | **Kullanılabilir** (List<Integer> mümkündür). |
+| **Dönüştürme İşlemi** | Boxing & Unboxing gerektirir. | Boxing & Unboxing ile primitive türlere dönüşebilir. |
+
+## Wrapper Type Kullanım Senaryoları
+| **Senaryo** | **Primitive Kullanımı** | **Wrapper Kullanımı** |
+|------------|--------------------|--------------------|
+| **Performans & Bellek** | ✅ Daha hızlı, az bellek kullanır. | ❌ Daha fazla bellek kullanır. |
+| **Koleksiyonlarla Kullanım** | ❌ Kullanılamaz. (`List<int>` hata verir) | ✅ Kullanılabilir. (`List<Integer>`) |
+| **Null Değer Atama** | ❌ Mümkün değil. | ✅ Mümkün (`Integer x = null;`) |
+| **Metot Kullanımı** | ❌ Metotları yoktur. | ✅ `valueOf()`, `parseInt()` gibi metotlar içerir. |
+| **Generics (Jenerik Türler)** | ❌ Kullanılamaz (`T extends int` olmaz). | ✅ Kullanılabilir (`T extends Number`). |
+
 ---
 
 ### 1. Ders Soruları Özeti
