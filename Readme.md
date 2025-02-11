@@ -244,7 +244,9 @@ number1=10+1=11 olur
 
 ## Stack Memory - Heap Memory Nedir?
 - Stack ve Heap, programların verileri saklamak için kullandığı iki farklı alanı ifade eder.
+
 | Stack Memory | Heap Memory |
+| ------------ | ----------- |
 | Küçük ve hızlıdır. | Daha büyük ve daha yavaş. |
 | Metod çağrıları sırasında kullanılan değişkenler burda saklanır. | Nesneler (objects) burda saklanır. |
 | Yerel (local) değişkenler ve metod çağrılarına ait bilgiler burada tutulur. |          |
