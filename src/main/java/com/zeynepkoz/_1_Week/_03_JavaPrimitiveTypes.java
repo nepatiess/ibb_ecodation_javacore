@@ -1,4 +1,4 @@
-package com.zeynepkoz.part_1_javatypes;
+package com.zeynepkoz._1_Week;
 
 public class _03_JavaPrimitiveTypes {
 
