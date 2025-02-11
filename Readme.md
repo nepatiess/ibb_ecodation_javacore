@@ -77,6 +77,7 @@ JRE, Java programlarını çalıştırmak için gerekli ortamı sağlayan bir bi
 - Çalışma zamanı kütüphaneleri
 - Java sınıfları ve destekleyici dosyalar
 
+### Eğer sadece Java programlarını çalıştırmak istiyorsanız, JDK yerine sadece JRE yükleyebiliriz. Ancak, JRE Java kodu yazmak veya derlemek için yeterli değildir.
 ---
 
 ## Compiler Nedir?
