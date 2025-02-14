@@ -334,9 +334,87 @@ public class Main {
 - Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
 # 3. ders ödevi
-// Stringten'ten int geçerken nasıl çözebiliriz?
-        System.out.println("Bildiğiniz diller veya teknolojiler: ");
+## Stringten'ten int geçerken nasıl çözebiliriz?
+
+``` 
+  System.out.println("Bildiğiniz diller veya teknolojiler: ");
         language = klavye.nextInt();
+```
+  Java'da nextInt() kullanılırken, kullanıcıdan gelen girdinin tam sayı olması gerekir.Ancak "Bildiğiniz diller veya teknolojiler" yazısından dolayı hata verecektir.
+  Bunun yerine, kullanıcıdan bir string alıp sonra bir intger'a çevirmek için şu adımlar takip edilebilir:
+  
+- nextLine() kullanarak string alıp parseInt() ile çevirmek
+
+``` 
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner klavye = new Scanner(System.in);
+
+        System.out.println("Bir sayı giriniz: "); 
+        String girdi = klavye.nextLine(); // Önce String olarak al
+       
+        try {
+            int sayi = Integer.parseInt(girdi); // String'i int'e çevir
+            System.out.println("Girdiğiniz sayı: " + sayi);
+        } catch (NumberFormatException e) {
+            System.out.println("Hatalı giriş! Lütfen bir sayı giriniz.");
+        }
+    }
+}
+```
+- nextInt() yerine nextLine() kullanılabilir:
+
+``` 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner klavye = new Scanner(System.in);
+
+        System.out.println("Bildiğiniz diller veya teknolojiler: "); 
+        String language = klavye.nextLine(); // nextInt() yerine nextLine() kullan
+
+        System.out.println("Girdiğiniz: " + language);
+    }
+}
+```
+## null değeri ne zaman kullanabilirim?
+- Bir nesnenin henüz başlangıç değerinin olmadığını belirtmek için,
+``` 
+String name = null; // Daha sonra bir değer atanacak
+```
+
+- İsteğe bağlı değerler için,
+```
+Optional<String> optionalName = Optional.ofNullable(null);
+```
+
+- Başarısız olan veya sonuç üretmeyen bir meyod dönüşü içim,
+```
+public String findUserById(int id) {
+    if (id == 1) {
+        return "Zeynep Koz";
+    }
+    return null; // Kullanıcı bulunamazsa null döndür
+}
+```
+
+- Dizilerde veya koleksiyonlarda eksik değerler için,
+```
+String[] users = new String[3];
+users[0] = "Zeynep";
+users[1] = null; // Henüz bir kullanıcı atanmadı
+users[2] = "Ayşe";
+```
+
+- Bellek kullanımını azaltmak için.
+```
+User user = new User("Zeynep");
+user = null; // Garbage Collector tarafından temizlenebilir
+```
+
         
 # 4. ders ödevi (11 Şubat)
 - switch-case ile if-else if-else arasındaki farklar nelerdir?
