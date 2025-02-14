@@ -322,7 +322,8 @@ Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
 ## Scanner Class Nedir?
 - Scanner sınıfı, kullanıcıdan veri almak için kullanılır. Java'da giriş almak için genellikle **System.in** ile birlikte kullanılır.
 
-``` Kullanımı
+### Kullanımı
+``` 
 import java.util.Scanner;
 
 public class Main {
@@ -441,8 +442,11 @@ user = null; // Garbage Collector tarafından temizlenebilir
         
 # 4. Ders Ödevi (11 Şubat)
 ## Switch-case, if, else if, else arasındaki farklar nelerdir?
-- Kullanım Örnekleri:
-``` switch-case (Eşitlik karşılaitırmaları için)
+
+ ### Kullanım Örnekleri:
+ - switch-case (Eşitlik karşılaitırmaları için)
+   
+``` 
 int gun = 3;
 switch (gun) {
     case 1:
@@ -461,7 +465,8 @@ switch (gun) {
 ✔ Avantajı: Çok sayıda sabit değerli kontrol yaparken daha okunaklıdır.
 ❌ Dezavantajı: Sadece eşitlik karşılaştırması yapabilir.
 
-``` if-else if-else (Her türlü karşılaştırma için)
+- if-else if-else (Her türlü karşılaştırma için)
+``` 
 int yas = 20;
 
 if (yas < 18) {
@@ -498,7 +503,8 @@ if (yas < 18) {
 
 ### Kullanım Örnekleri:
 
-``` for döngüsü (Sayaç kontrollü)
+- for döngüsü (Sayaç kontrollü)
+``` 
 for (int i = 1; i <= 5; i++) {
     System.out.println("Merhaba, döngü " + i + ". kez çalışıyor.");
 }
@@ -506,7 +512,8 @@ for (int i = 1; i <= 5; i++) {
 ✔ Avantajı: Başlangıç, koşul ve artırma/azaltma tek satırda olduğu için daha okunaklıdır.
 ❌ Dezavantajı: Koşula dayalı çalışması gereken durumlarda esnekliği azalır.
 
-``` while döngüsü (koşul kontrollü)
+- while döngüsü (koşul kontrollü)
+``` 
 int sayi = 0;
 while (sayi < 5) {
     System.out.println("Sayı: " + sayi);
@@ -527,7 +534,8 @@ while (sayi < 5) {
 ---
 
 ## String birleştirme (concatention) türleri nedir? StringBuilder, StringBuffer nedir? 
-  ``` + ile birleştirme
+- + ile birleştirme
+  ``` 
   String ad = "Zeynep";
   String soyad = "Koz";
   String tamIsim = ad + " " + soyad; 
@@ -537,7 +545,8 @@ while (sayi < 5) {
 ✔ Avantajı: Kullanımı basittir.
 ❌ Dezavantajı: Çok sayıda String birleştirme işlemi yapıldığında performans düşebilir.
 
-```concat() metodu ile birleştirme
+- concat() metodu ile birleştirme
+```
 String s1 = "Java";
 String s2 = " Programlama";
 String sonuc = s1.concat(s2);
@@ -546,7 +555,8 @@ System.out.println(sonuc); // Çıktı: Java Programlama
 ✔ Avantajı: + operatöründen daha açık ve anlaşılır olabilir.
 ❌ Dezavantajı: null değerlerle işlem yaparken hata verebilir.
 
-``` StringBuilder ile birleştirme
+- StringBuilder ile birleştirme
+``` 
 StringBuilder sb = new StringBuilder("Merhaba");
 sb.append(" Dünya!");
 System.out.println(sb.toString()); // Çıktı: Merhaba Dünya!
@@ -554,7 +564,8 @@ System.out.println(sb.toString()); // Çıktı: Merhaba Dünya!
 ✔ Avantajı: + operatörüne göre daha performanslıdır (Çünkü String nesneleri immutable'dır, ancak StringBuilder mutable’dır).
 ❌ Dezavantajı: + veya concat() kadar kısa ve basit değildir.
 
-```StringBuffer ile birleştirme
+- StringBuffer ile birleştirme
+```
 StringBuffer sbf = new StringBuffer("Kod");
 sbf.append(" Yazmak");
 System.out.println(sbf.toString()); // Çıktı: Kod Yazmak
@@ -562,14 +573,16 @@ System.out.println(sbf.toString()); // Çıktı: Kod Yazmak
 ✔ Avantajı: StringBuilder gibi performanslıdır ve aynı zamanda thread-safe çalışır.
 ❌ Dezavantajı: StringBuilder'a göre biraz daha yavaştır.
 
-```join() ile birleştirme
+- join() ile birleştirme
+```
 String sonuc = String.join(" - ", "Java", "Python", "C++");
 System.out.println(sonuc); // Çıktı: Java - Python - C++
 ```
 ✔ Avantajı: Daha düzenli ve okunaklıdır.
 ❌ Dezavantajı: Java 8 ve üstü sürümlerde çalışır.
 
-``` format() ile birleştirme
+- format() ile birleştirme
+``` 
 String isim = "Zeynep";
 int yas = 21;
 String sonuc = String.format("Benim adım %s ve %d yaşındayım.", isim, yas);
@@ -578,7 +591,8 @@ System.out.println(sonuc); // Çıktı: Benim adım Zeynep ve 21 yaşındayım.
 ✔ Avantajı: Şablon bazlı formatlamalar için uygundur.
 ❌ Dezavantajı: Küçük işlemler için gereksiz karmaşıklık oluşturabilir.
 
-```Arrays.toString() ile birleştirme
+- Arrays.toString() ile birleştirme
+```
 import java.util.Arrays;
 
 String[] kelimeler = {"Merhaba", "Dünya", "!"};
@@ -588,7 +602,8 @@ System.out.println(sonuc); // Çıktı: [Merhaba, Dünya, !]
 ✔ Avantajı: Dizileri String'e dönüştürmek için uygundur.
 ❌ Dezavantajı: Çıktıda köşeli parantezler ([ ]) ve virgüller bulunur.
 
-```Collector.joining() ile birleştirme
+- Collector.joining() ile birleştirme
+```
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -603,25 +618,82 @@ System.out.println(sonuc); // Çıktı: Elma, Armut, Muz
 ---
 
 ## return, continue, break nedir? Aralarındaki farklar nelerdir?
-## Static yapı nedir?
-## Overloading nedir?
-## Override nedir?
-## Aralarındaki fark nelerdir?
+### Return
+- return, bir metodun çalışmasını sonlandırır metod içinde kullanılır.
+- Eğer metod bir değer döndürüyorsa, return ile bir değer belirtilmelidir.
+- void metotdlarda sadece return; yazarak metodu bitirebiliriz.
+- metodun bir değer döndürmesini istiyorsan, metodun çalışmasını erken durdurmak için kullanılır.
 
-``` 1. kod
-String kelime= new String();
+### Break
+- Break döngüyü veya switch-case bloklarını tamamen sonlandırır.
+- Döngüden çıkınca kod akışı devam eder.
+- switch-case içinde gereksiz kontorlü önlemek için, bir döngü belirli bir durumda durmalıysa kullanılır.
+
+### continue
+- Döngü içindeki kodun geri kalanını çalıştırmadan bir sonraki döngü adımına geçer.
+- Belirli bir koşul sağlandığında döngünün o adımını atmlamak için, kullanılır
+- Örneğin, belirli sayıları işlem dışı bırakmak için.
+
+### Örnek kod
+```
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 2) {
+                continue; // 2 atlanır, döngü devam eder.
+            }
+            if (i == 4) {
+                break; // Döngü tamamen sonlanır.
+            }
+            System.out.println("Sayı: " + i);
+        }
+        
+        System.out.println("Metot çağrılıyor...");
+        testReturn();
+    }
+
+    public static void testReturn() {
+        System.out.println("Bu metot çalışıyor.");
+        return; // Metodu sonlandırır.
+        // System.out.println("Bu satır çalışmaz!"); (HATA: return sonrası kod çalışmaz)
+    }
+}
+```
+### Çıktı
+```
+Sayı: 1
+Sayı: 3
+Metot çağrılıyor...
+Bu metot çalışıyor.
 ```
 
-``` 2. kod
+---
+
+## Static yapı nedir?
+
+## Overloading nedir?
+
+## Override nedir?
+
+## Aralarındaki fark nelerdir?
+- 1. kod
+``` 
+String kelime= new String();
+```
+- 2. kod
+``` 
 String kelime= "";
 ```
 
+---
+
 ## Aralarındaki fark nedir?
-``` 1. kod
+- 1. kod
+```
  vocabulary1== vocabulary2 
 ```
-
-``` 2. kod
+- 2. kod
+``` 
   vocabulary1.equals(vocabulary2));
 ```
 
@@ -630,11 +702,13 @@ String kelime= "";
 ## parametre ile argüman arasında farklar nelerdir ?
 
 ## Arasındaki fark nedir? 
-``` 1. kod
+- 1. kod
+```
  Integer.valueOf(cast4String)
 ```
 
-``` 2. kod
+- 2. kod
+``` 
    Integer.parseInt(cast4String)
 ```
 
