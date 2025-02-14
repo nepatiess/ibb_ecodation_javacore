@@ -526,8 +526,82 @@ while (sayi < 5) {
 
 ---
 
-## String birleştirme (concatention) türleri nedir?
-## StringBuilder, StringBuffer nedir?
+## String birleştirme (concatention) türleri nedir? StringBuilder, StringBuffer nedir? 
+  ``` + ile birleştirme
+  String ad = "Zeynep";
+  String soyad = "Koz";
+  String tamIsim = ad + " " + soyad; 
+  System.out.println(tamIsim); // Çıktı: Zeynep Koz
+  ```
+
+✔ Avantajı: Kullanımı basittir.
+❌ Dezavantajı: Çok sayıda String birleştirme işlemi yapıldığında performans düşebilir.
+
+```concat() metodu ile birleştirme
+String s1 = "Java";
+String s2 = " Programlama";
+String sonuc = s1.concat(s2);
+System.out.println(sonuc); // Çıktı: Java Programlama
+```
+✔ Avantajı: + operatöründen daha açık ve anlaşılır olabilir.
+❌ Dezavantajı: null değerlerle işlem yaparken hata verebilir.
+
+``` StringBuilder ile birleştirme
+StringBuilder sb = new StringBuilder("Merhaba");
+sb.append(" Dünya!");
+System.out.println(sb.toString()); // Çıktı: Merhaba Dünya!
+```
+✔ Avantajı: + operatörüne göre daha performanslıdır (Çünkü String nesneleri immutable'dır, ancak StringBuilder mutable’dır).
+❌ Dezavantajı: + veya concat() kadar kısa ve basit değildir.
+
+```StringBuffer ile birleştirme
+StringBuffer sbf = new StringBuffer("Kod");
+sbf.append(" Yazmak");
+System.out.println(sbf.toString()); // Çıktı: Kod Yazmak
+```
+✔ Avantajı: StringBuilder gibi performanslıdır ve aynı zamanda thread-safe çalışır.
+❌ Dezavantajı: StringBuilder'a göre biraz daha yavaştır.
+
+```join() ile birleştirme
+String sonuc = String.join(" - ", "Java", "Python", "C++");
+System.out.println(sonuc); // Çıktı: Java - Python - C++
+```
+✔ Avantajı: Daha düzenli ve okunaklıdır.
+❌ Dezavantajı: Java 8 ve üstü sürümlerde çalışır.
+
+``` format() ile birleştirme
+String isim = "Zeynep";
+int yas = 21;
+String sonuc = String.format("Benim adım %s ve %d yaşındayım.", isim, yas);
+System.out.println(sonuc); // Çıktı: Benim adım Zeynep ve 21 yaşındayım.
+```
+✔ Avantajı: Şablon bazlı formatlamalar için uygundur.
+❌ Dezavantajı: Küçük işlemler için gereksiz karmaşıklık oluşturabilir.
+
+```Arrays.toString() ile birleştirme
+import java.util.Arrays;
+
+String[] kelimeler = {"Merhaba", "Dünya", "!"};
+String sonuc = Arrays.toString(kelimeler);
+System.out.println(sonuc); // Çıktı: [Merhaba, Dünya, !]
+```
+✔ Avantajı: Dizileri String'e dönüştürmek için uygundur.
+❌ Dezavantajı: Çıktıda köşeli parantezler ([ ]) ve virgüller bulunur.
+
+```Collector.joining() ile birleştirme
+import java.util.List;
+import java.util.stream.Collectors;
+
+List<String> liste = List.of("Elma", "Armut", "Muz");
+String sonuc = liste.stream().collect(Collectors.joining(", "));
+
+System.out.println(sonuc); // Çıktı: Elma, Armut, Muz
+```
+✔ Avantajı: Koleksiyonlarla (List, Set, vb.) çalışırken kullanışlıdır.
+❌ Dezavantajı: Java 8 ve üstü sürümlerde kullanılabilir.
+
+---
+
 ## return, continue, break nedir? Aralarındaki farklar nelerdir?
 ## Static yapı nedir?
 ## Overloading nedir?
