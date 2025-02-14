@@ -35,7 +35,7 @@ Java case sensitive bir dildir. (Büyük-küçük harflere duyarlı yüksek sevi
 ---
 
 # Ödevler
-# 1. Ders Ödev (4 Şubat 2025)
+# 1. Ders Ödevi (4 Şubat 2025)
 ## Maven Nedir?
 Maven, Java projelerinde bağımlılık yönetimi ve otomasyon sağlayan bir proje yönetim aracıdır. Apache tarafından geliştirilmiştir ve projelerin derlenmesi, test edilmesi, paketlenmesi gibi işlemleri otomatikleştirir.
 
@@ -208,7 +208,9 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 - Primitive Types bellekte doğrudan yer kaplayan basit veri türleridir.
 - Wrapper Types, primitive türleri nesne olarak kullanmayı sağlar.
 
-# 2. Ders Ödev (6 Şubat 2025)
+---
+
+# 2. Ders Ödevi (6 Şubat 2025)
 ## camelCase yazım nedir? 
 - İlk kelime küçük harfle başlar, sonraki kelimeler büyük harfle başlar.
 - Genellikle JavaScript, Java ve C# gibi dillerde kullanılır.
@@ -217,6 +219,8 @@ Wrapper sınıfları, koleksiyonlarla (List, Set, Map) çalışırken faydalıd�
 string userName
 int playerScore
 ```
+
+---
 
 ## PascalCase yazım nedir? 
 - Tüm kelimelerin ilk harfi büyük olur.
@@ -228,6 +232,8 @@ class PlayerData{}
 class GameManager{}
 ```
 
+---
+
 ## snace_case yazım nedir? 
 - Tüm harfler küçük olur, kelimeler alt çizgi (_) ile ayrılır.
 - Genellikle Python'da değişken ve fonksiyon isimlendirmede tercih edilir.
@@ -238,6 +244,8 @@ user_name
 player_score
 ```
 
+---
+
 ## kebab-case yazım nedir?
 - Tüm harfler küçük olur, kelimeler tire (-) ile ayrılır.
 - Genellikle HTML, CSS ve URL yapılarında kullanılır.
@@ -247,6 +255,8 @@ player_score
 <div class = "player-score"></div>
 <link rel = "stylesheet" href = "game-style.css">
 ```
+
+---
 
 ## Sorular
 ```
@@ -264,6 +274,8 @@ System.out.println(number2);
 Açıklama: Önce değişkenin değeri artılır, sonra kullanılır
 number1=10+1=11 olur
 Çıktı: 11
+
+---
 
 ## Stack Memory - Heap Memory Nedir?
 - Stack ve Heap, programların verileri saklamak için kullandığı iki farklı alanı ifade eder.
@@ -291,6 +303,8 @@ class Player {
 Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
 ```
 
+---
+
 ## Escape Character Nedir?
 - Escape karakterlerini, özel karakterleri ekranda göstermek veya belirli işlemleri gerçekleitrmesi için kullanılır. Ters eğik çizgi (\) ile başlar.
 
@@ -302,6 +316,8 @@ Player player1 = new Player(); //player1 nesnesi Heap'te tutulur.
 | \\" | Çift tırnak | 
 | \\' | Tek tırnak | 
 | \\\ | Ters eğik çizgi | 
+
+---
 
 ## Scanner Class Nedir?
 - Scanner sınıfı, kullanıcıdan veri almak için kullanılır. Java'da giriş almak için genellikle **System.in** ile birlikte kullanılır.
@@ -333,7 +349,9 @@ public class Main {
 
 - Scanner sınıfı, kullanıcıdan veri almak için yaygın olarak kullanılan bir sınıftır.
 
-# 3. ders ödevi
+---
+
+# 3. Ders Ödevi (8 Şubat)
 ## Stringten'ten int geçerken nasıl çözebiliriz?
 
 ``` 
@@ -380,6 +398,10 @@ public class Main {
     }
 }
 ```
+
+---
+
+
 ## null değeri ne zaman kullanabilirim?
 - Bir nesnenin henüz başlangıç değerinin olmadığını belirtmek için,
 ``` 
@@ -415,13 +437,137 @@ User user = new User("Zeynep");
 user = null; // Garbage Collector tarafından temizlenebilir
 ```
 
+---
         
-# 4. ders ödevi (11 Şubat)
-- switch-case ile if-else if-else arasındaki farklar nelerdir?
-- for ile while arasındaki fark nelerdir?
+# 4. Ders Ödevi (11 Şubat)
+## Switch-case, if, else if, else arasındaki farklar nelerdir?
+- Kullanım Örnekleri:
+``` switch-case (Eşitlik karşılaitırmaları için)
+int gun = 3;
+switch (gun) {
+    case 1:
+        System.out.println("Pazartesi");
+        break;
+    case 2:
+        System.out.println("Salı");
+        break;
+    case 3:
+        System.out.println("Çarşamba");
+        break;
+    default:
+        System.out.println("Geçersiz Gün");
+}
+```
+✔ Avantajı: Çok sayıda sabit değerli kontrol yaparken daha okunaklıdır.
+❌ Dezavantajı: Sadece eşitlik karşılaştırması yapabilir.
+
+``` if-else if-else (Her türlü karşılaştırma için)
+int yas = 20;
+
+if (yas < 18) {
+    System.out.println("Çocuk");
+} else if (yas >= 18 && yas < 65) {
+    System.out.println("Yetişkin");
+} else {
+    System.out.println("Yaşlı");
+}
+```
+✔ Avantajı: Daha karmaşık ve dinamik koşulları işleyebilir.
+❌ Dezavantajı: Çok fazla karşılaştırma olduğunda kod karmaşık hale gelebilir.
+
+### Hangisini ne zaman kullanmalıyım:
+✅ switch-case kullan:
+- Eğer sabit değerler üzerinden karar veriyosan (int, char, string, enum).
+- Örneğin, bir menüdeki seçenekleri kontrol etmek veya bir haftanın günlerini belirlemek vb.
+
+✅ if-else if-else kullan:
+- Mantıksal karşılaştırmalar (<,>,&&,||) yapman gerekiyorsa.
+- Daha esnek koşullar gerekiyorsa
+- Örneğin, kullanıcının yaşına, skoruna göre işlem yapmak vb.
+
+---
+
+## for ile while arasındaki fark nelerdir?
+| Özellik | for döngüsü | while döngüsü | 
+| ------- | ----------- | ------------- |
+| Kullanım alanı | Döngü sayısı önceden bliniyosa tercih edilir. | Döngü sayısı önceden bilinmiyorsa kullanılır. |
+| Yapı | Başlangıç, koşul ve artırma/azaltma tek satırda yazılır. | Sadece koşul belirtlilir, artma/azalma içerde yapılır. |
+| Kod Okunabilirliği | Daha düzenli ve okunaklıdır. | Daha esnektir ama bazen kod karmaşık olabilir. | 
+| Sonsuz döngü | for(;;) şeklinde yazılır. | while(true) şeklinde yazılır. | 
+| Kullanım esnekliği | Sayaçlı işlemler için daha uygundur. | Koşul dayalı işlemler için daha uuygundur. | 
+
+### Kullanım Örnekleri:
+
+``` for döngüsü (Sayaç kontrollü)
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Merhaba, döngü " + i + ". kez çalışıyor.");
+}
+```
+✔ Avantajı: Başlangıç, koşul ve artırma/azaltma tek satırda olduğu için daha okunaklıdır.
+❌ Dezavantajı: Koşula dayalı çalışması gereken durumlarda esnekliği azalır.
+
+``` while döngüsü (koşul kontrollü)
+int sayi = 0;
+while (sayi < 5) {
+    System.out.println("Sayı: " + sayi);
+    sayi++;
+}
+```
+✔ Avantajı: Koşula bağlı olduğu için daha esnek çalışır.
+❌ Dezavantajı: Eğer artırma unutulursa, sonsuz döngü oluşabilir.
+
+### Hangisini kullanmalıyım?
+| Senaryo | Tercih edilmesi gereken döngü |
+| ------- | ----------------------------- |
+| Tekrar sayısı belli mi? | for |
+| Koşul bazlı mı çalışacak? | while |
+| En az bir kez mi çalışmalı? | do-while | 
+| Sayaç kullanılacak mı? | for | 
+
+---
+
+## String birleştirme (concatention) türleri nedir?
+## StringBuilder, StringBuffer nedir?
+## return, continue, break nedir? Aralarındaki farklar nelerdir?
+## Static yapı nedir?
+## Overloading nedir?
+## Override nedir?
+## Aralarındaki fark nelerdir?
+
+``` 1. kod
+String kelime= new String();
+```
+
+``` 2. kod
+String kelime= "";
+```
+
+## Aralarındaki fark nedir?
+``` 1. kod
+ vocabulary1== vocabulary2 
+```
+
+``` 2. kod
+  vocabulary1.equals(vocabulary2));
+```
 
 
+# 5. Ders Ödevi (13 Şubat)
+## parametre ile argüman arasında farklar nelerdir ?
 
+## Arasındaki fark nedir? 
+``` 1. kod
+ Integer.valueOf(cast4String)
+```
+
+``` 2. kod
+   Integer.parseInt(cast4String)
+```
+
+## Neden Java 8 bilmek zorundayım ?
+
+
+## Java 8 ile gelen özellikler nelerdir ?
 
 
 
